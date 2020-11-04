@@ -1,0 +1,180 @@
+<!-- aframe documentation: https://aframe.io/docs/1.0.0/introduction/ -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<link href="https://fonts.googleapis.com/css2?family=Turret+Road&display=swap" rel="stylesheet">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>aframe empty template</title>
+	<script src="./libraries/aframe-1.0.4.min.js"></script>
+	<script src="./libraries/aframe_ply_pointcloud_loader.js"></script>
+</head>
+
+<style>
+	body {
+		background-color: silver;
+	}
+
+	body {
+		column-count: 2;
+	}
+
+	body {
+	font-family: 'Turret Road', cursive;}
+	p{color: pink}
+
+	h1{color:white;
+		font-size: 100px;
+	}
+
+	p.orange {color:orange;}
+
+	p#important {color: red}
+
+ 	h1 {
+  line-height: 0.1;
+	font-size: 100px;
+	text-align: left;
+	color: white;
+	margin-top: 65px;
+ 	margin-bottom: 100px;
+ 	margin-right: 30px;
+ 	margin-left: 30px;
+	  column-span: all;
+	}
+
+	h2 {
+ line-height: 0.1;
+ font-size: 100px;
+ text-align: right;
+ color: white;
+ margin-top: 65px;
+ margin-bottom: 100px;
+ margin-right: 30px;
+ margin-left: 30px;
+   column-span: all;
+	}
+
+	p{
+		margin-right: 30px;
+		margin-left: 30px;
+		line-height: 1;
+		color: black
+	}
+
+
+p.orange {color:white;}
+
+p#important {color: white}
+
+a:link {
+  color: white;}
+
+
+
+</style>
+
+<body>
+		<a-scene vr-mode-ui="enabled: false"
+						 loading-screen="enabled: false">
+
+			<!-- pre-load your assets(models, videos, images etc.) here -->
+			<a-assets>
+				<a-asset-item id="rock-glb" src="./models/rock-mesh.glb" response-type="arraybuffer"></a-asset-item>
+				<a-asset-item id="chair-glb" src="./models/chair.glb" response-type="arraybuffer"></a-asset-item>
+				<a-asset-item id="rock-ply" src="./models/rock-pointcloud.ply" response-type="arraybuffer"></a-asset-item>
+				<a-asset-item id="chair2-ply" src="./models/chair2.ply" response-type="arraybuffer"></a-asset-item>
+    		<!-- <video id="rocks-mp4" muted autoplay loop="true" src="./video/rocks.mp4"></video> -->
+			</a-assets>
+
+			<!-- Scene camera -->
+			<a-entity camera look-controls position="0 1 -4" wasd-controls="acceleration:10"></a-entity>
+
+			<!-- Box primitive -->
+			<!-- <a-cone color="olive"
+						 depth="2"
+						 height="2"
+						 width="2"
+						 position="0 0.5 -6"
+						 rotation="0 45 0">
+			</a-cone> -->
+
+			<!-- Text entity -->
+			<!-- <a-entity position="5 0 -5"
+								text="width: 6;
+											color: blue;
+											value: A rock is any naturally occurring solid mass or aggregate of minerals or mineraloid matter. It is categorized by the minerals included, its chemical composition and the way in which it is formed. Rocks are usually grouped into three main groups: igneous rocks, metamorphic rocks and sedimentary rocks. Rocks form the Earth's outer solid layer, the crust. ">
+			</a-entity> -->
+
+
+			<!-- Video primitive -->
+  		<!-- <a-video src="#rocks-mp4"
+							 width="16"
+							 height="9"
+							 position="6 2 20">
+			</a-video> -->
+
+			<!-- PLY point cloud entity -->
+			<a-entity ply-pointcloud-model="src: #chair2-ply;
+																			pointSize: 0.008"
+
+								position="0 -1 -5"
+								rotation="0 0 0"
+rotation="0 360 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+
+
+
+			</a-entity>
+
+
+
+
+			<h1>ARIANS</h1>
+
+			<h2>WEBSITE</h2>
+
+			<p>
+			hello
+			</p>
+
+			<p class="orange">
+			the class paragraph thing
+			</p>
+
+			<p id="important">
+
+	What is Lorem Ipsum?
+
+	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+	Why do we use it?
+
+	It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+	Where does it come from?
+
+	Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+	The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+			</p>
+
+			<p>
+				<A href=www.google.com>
+					arian
+			</p>
+
+
+
+
+			<!-- GLB mesh entity -->
+			<!-- <a-entity gltf-model="#chair-glb"
+								position="42 0 -6"
+								scale="0.75 0.75 0.75">
+			</a-entity> -->
+
+			<!-- <a-entity light="color: #AFA; intensity: 100" position="42 0 -6"></a-entity> -->
+
+</body>
+</html>
